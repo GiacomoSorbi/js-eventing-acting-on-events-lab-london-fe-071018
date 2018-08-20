@@ -23,5 +23,5 @@ const moves = {
 }
 
 document.addEventListener('keydown', function(e) {
-  moves[e.which]();
+  (moves[e.which] || (_ => console.log(e.which)))();
 })
